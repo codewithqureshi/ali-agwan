@@ -1,1 +1,35 @@
-<p>service works!</p>
+<section class="services-section">
+  <div class="services-container">
+    
+    <div class="services-header">
+      <h2 class="services-tag">OUR EXPERTISE</h2>
+      <h3 class="services-title">Bespoke Financial <span class="gold-text">Solutions</span></h3>
+    </div>
+
+    <div class="services-grid">
+      
+      @for (item of services; track item.title) {
+        <div class="service-card" [class.active-card]="item.highlight">
+          
+          @if (item.highlight) {
+            <span class="premium-badge">PREMIUM</span>
+          }
+
+          <div class="card-icon">
+            <i class="fas {{ item.icon }}"></i>
+          </div>
+          
+          <h4 class="card-title">{{ item.title }}</h4>
+          <p class="card-desc">{{ item.desc }}</p>
+          
+          <div class="card-footer">
+            <span class="read-more">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      } @empty {
+        <p class="no-data">No services available at the moment.</p>
+      }
+
+    </div>
+  </div>
+</section>

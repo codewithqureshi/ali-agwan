@@ -1,0 +1,170 @@
+/* --- 1. BASE WRAPPER --- */
+.project-detail-wrapper { 
+  background-color: #000 !important; 
+  min-height: 100vh; 
+  color: #fff;
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+}
+
+/* --- 2. HERO SECTION --- */
+.detail-hero {
+  height: 65vh; 
+  background-size: cover; 
+  background-position: center;
+  position: relative; 
+  display: flex; 
+  align-items: flex-end;
+  /* Desktop par image header ke niche se shuru ho */
+  margin-top: 0; 
+}
+
+.hero-overlay {
+  width: 100%; 
+  padding: 80px 0 40px 0;
+  background: linear-gradient(to top, #000 20%, transparent 100%);
+}
+
+/* --- 3. CONTAINER (Elite Margins) --- */
+.container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 40px; /* Proper Left-Right Margin */
+}
+
+/* --- 4. CONTENT GRID --- */
+.detail-content {
+  padding: 80px 0;
+  background-color: #000;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr; /* Text area vs Sidebar */
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- 5. TYPOGRAPHY (As per your Screenshot) --- */
+.project-cat { 
+  color: #D4AF37; 
+  letter-spacing: 4px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  margin-bottom: 12px; 
+  font-size: 12px; 
+}
+
+.project-title { 
+  font-family: 'Playfair Display', serif; 
+  font-size: clamp(35px, 6vw, 55px); 
+  line-height: 1.1; 
+  margin: 0; 
+  color: #fff; 
+}
+
+h2, h3 { 
+  font-family: 'Playfair Display', serif; 
+  color: #D4AF37; 
+  margin-bottom: 25px; 
+  font-size: 28px; 
+}
+
+.desc { 
+  font-size: 18px; 
+  line-height: 1.9; 
+  color: #ccc; 
+  margin-bottom: 50px; 
+}
+
+/* --- 6. INFO BLOCKS & SOLUTION --- */
+.info-block {
+  padding: 40px 0;
+  border-top: 1px solid #222; /* Subtle divider */
+}
+
+.gold-box {
+  background: transparent !important; /* No highlight box */
+  border-left: 3px solid #D4AF37 !important; /* Only left accent line */
+  padding: 10px 0 10px 30px !important; 
+  margin-top: 40px;
+}
+
+/* --- 7. SIDEBAR (Meta Info) --- */
+.sidebar { 
+  position: sticky; 
+  top: 120px; 
+}
+
+.meta-item { 
+  margin-bottom: 30px; 
+  border-bottom: 1px solid #1a1a1a; 
+  padding-bottom: 15px; 
+}
+
+.meta-item span { 
+  display: block; 
+  font-size: 11px; 
+  color: #666; 
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+}
+
+.meta-item strong { 
+  display: block; 
+  font-size: 19px; 
+  color: #D4AF37; 
+  margin-top: 5px; 
+}
+
+/* --- 8. BACK BUTTON --- */
+.btn-back {
+  background: transparent; 
+  color: #D4AF37; 
+  border: 1px solid #D4AF37;
+  padding: 16px 35px; 
+  cursor: pointer; 
+  font-weight: 700; 
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-back:hover { 
+  background: #D4AF37; 
+  color: #000; 
+}
+
+/* --- 9. MOBILE RESPONSIVE (Strict Fixes) --- */
+@media (max-width: 900px) {
+  .container { 
+    padding: 0 25px; /* Mobile margins */
+  }
+
+  .detail-hero { 
+    height: 45vh; 
+    margin-top: 75px; /* Fixed Header gap */
+  }
+
+  .content-grid { 
+    grid-template-columns: 1fr; /* Stacked layout */
+    gap: 50px; 
+    padding-bottom: 60px; /* Bottom space */
+  }
+
+  .sidebar {
+    position: static; /* Remove sticky on mobile */
+    margin-top: 20px;
+  }
+
+  .project-title { 
+    font-size: 30px; 
+  }
+
+  .btn-back {
+    width: 100%; /* Full width for better touch */
+    text-align: center;
+    margin-bottom: 60px; /* Bottom scroll space */
+  }
+}

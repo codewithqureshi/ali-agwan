@@ -1,0 +1,51 @@
+@if (project) {
+  <div class="project-detail-wrapper">
+    <div class="detail-hero" [style.backgroundImage]="'url(' + project.image + ')'">
+      <div class="hero-overlay">
+        <div class="container">
+          <p class="project-cat">{{ project.category }}</p>
+          <h1 class="project-title">{{ project.title }}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-content container">
+      <div class="content-grid">
+        <div class="main-text">
+          <h2>Overview</h2>
+          <p class="desc">{{ project.description }}</p>
+
+          <div class="info-block">
+            <h3>The Challenge</h3>
+            <p>{{ project.challenge }}</p>
+          </div>
+
+          <div class="info-block gold-box">
+            <h3>Strategic Solution</h3>
+            <p>{{ project.solution }}</p>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="meta-card">
+            <div class="meta-item">
+              <span>Location</span>
+              <strong>{{ project.location }}</strong>
+            </div>
+            <div class="meta-item">
+              <span>Client</span>
+              <strong>{{ project.client }}</strong>
+            </div>
+            <div class="meta-item">
+              <span>Completion</span>
+              <strong>{{ project.year }}</strong>
+            </div>
+            <button class="btn-back" routerLink="/projects">BACK TO PROJECTS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="not-found">Project Not Found</div>
+}

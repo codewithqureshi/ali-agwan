@@ -1,1 +1,35 @@
-<p>project works!</p>
+<section class="projects-section">
+  <div class="projects-container">
+    
+    <div class="projects-header">
+      <h2 class="section-tag">PORTFOLIO</h2>
+      <h3 class="section-title">Strategic <span class="gold-text">Milestones</span></h3>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.id) {
+        <div class="project-card" [routerLink]="['/project', project.id]">
+          <div class="project-image-wrapper">
+            <img [src]="project.image" [alt]="project.title" class="project-img">
+            <div class="project-overlay">
+              <span class="location-tag">
+                <i class="fas fa-map-marker-alt"></i> {{ project.location }}
+              </span>
+              <div class="overlay-content">
+                <p class="proj-cat">{{ project.category }}</p>
+                <h4 class="proj-title">{{ project.title }}</h4>
+                <button class="view-case-btn">View Case Study</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="view-all-container">
+        <button class="btn-outline-gold" routerLink="/projects">
+            EXPLORE ALL PROJECTS <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+  </div>
+</section>

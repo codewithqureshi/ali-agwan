@@ -1,1 +1,41 @@
-<p>header works!</p>
+<header class="luxury-header">
+  <div class="header-container">
+    <div class="logo-area">
+      <i class="fas fa-crown gold-icon"></i>
+      <div class="brand-text">
+        <h1 class="logo-title">PRIME</h1>
+        <p class="logo-sub">Emirates Consulting</p>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#" class="link item-active">Home</a>
+      <a href="#" class="link">Services</a>
+      <a href="#" class="link">Projects</a>
+      <a href="#" class="link">About Us</a>
+    </nav>
+
+    <div class="action-area">
+      <button class="connect-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span>CONNECT ME</span>
+      </button>
+    </div>
+    
+    <div class="mobile-toggle-wrapper">
+        <button class="hamburger-btn" (click)="isMenuOpen = !isMenuOpen">
+            <i class="fas" [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen"></i>
+        </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" [class.active]="isMenuOpen">
+    <nav class="mobile-nav-links">
+        <a href="#" (click)="isMenuOpen = false">Home</a>
+        <a href="#" (click)="isMenuOpen = false">Services</a>
+        <a href="#" (click)="isMenuOpen = false">Projects</a>
+        <a href="#" (click)="isMenuOpen = false">About Us</a>
+        <button class="mobile-connect-btn">CONNECT ME</button>
+    </nav>
+</div>

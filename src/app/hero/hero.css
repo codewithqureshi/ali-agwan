@@ -1,0 +1,87 @@
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 60px 20px;
+  box-sizing: border-box;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.gold-shimmer { 
+  font-size: 50px; 
+  color: #D4AF37; 
+  margin-bottom: 20px; 
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4)); 
+}
+
+.hero-tag { 
+  color: #D4AF37; 
+  letter-spacing: 5px; 
+  font-size: 11px; 
+  margin-bottom: 15px; 
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(35px, 8vw, 75px);
+  color: #fff; 
+  line-height: 1.1; 
+  font-weight: 900; 
+  margin-bottom: 20px;
+}
+
+/* FIX: Text Gradient Visibility */
+.gold-gradient {
+  background: linear-gradient(135deg, #fceabb, #d4af37);
+  -webkit-background-clip: text !important; /* Ye line must hai */
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+}
+
+.hero-desc { 
+  color: #999; 
+  font-size: clamp(15px, 4vw, 18px); 
+  line-height: 1.7; 
+  margin-bottom: 40px; 
+  max-width: 650px; 
+}
+
+.hero-actions { 
+  display: flex; 
+  gap: 15px; 
+  width: 100%; 
+  justify-content: center; 
+}
+
+.btn-primary { 
+    background: linear-gradient(135deg, #fceabb, #d4af37); 
+    color: #000; border: none; padding: 16px 30px; 
+    font-weight: 800; border-radius: 4px; cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover { transform: scale(1.05); }
+
+.btn-secondary { 
+    background: transparent; color: #fff; border: 1px solid #333; 
+    padding: 16px 30px; font-weight: 600; border-radius: 4px; cursor: pointer;
+}
+
+/* Mobile View Fix */
+@media (max-width: 768px) {
+    .hero-actions { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 320px; }
+    .hero-section { padding-top: 100px; }
+}

@@ -1,0 +1,17 @@
+/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+  background-color: #000000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif !important;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+/* Global Gold Variable */
+:root {
+  --gold-prime: #D4AF37 !important;
+  --gold-gradient: linear-gradient(135deg, #fceabb 0%, #d4af37 50%, #b38728 100%) !important;
+}
