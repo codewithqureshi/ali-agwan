@@ -1,7 +1,6 @@
-/* Google Fonts Load */
+/* src/styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap');
 
-/* Force Black Background on Entire App */
 html, body {
   background-color: #000000 !important;
   margin: 0 !important;
@@ -9,8 +8,8 @@ html, body {
   color: #ffffff !important;
   font-family: 'Poppins', sans-serif !important;
   overflow-x: hidden;
+  min-height: 100vh;
 }
-
 /* Global Gold Variable */
 :root {
   --gold-prime: #D4AF37 !important;
