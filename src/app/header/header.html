@@ -1,1 +1,44 @@
-<p>header works!</p>
+<header class="luxury-header">
+  <div class="header-container">
+    
+    <div class="logo-area">
+      <i class="fas fa-crown gold-icon"></i>
+      <div class="brand-text">
+        <h1 class="logo-title">PRIME</h1>
+        <p class="logo-sub">EMIRATES CONSULTING</p>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#" class="link item-active">HOME</a>
+      <a href="#" class="link">SERVICES</a>
+      <a href="#" class="link">PROJECTS</a>
+      <a href="#" class="link">ABOUT</a>
+    </nav>
+
+    <div class="action-area">
+      <button class="connect-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span>CONNECT ME</span>
+      </button>
+    </div>
+    
+    <div class="mobile-toggle-wrapper">
+        <button class="mobile-menu-btn" (click)="toggleMenu()">
+            <i class="fas" [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen"></i>
+        </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" [class.active]="isMenuOpen">
+    <nav class="mobile-nav-links">
+        <a href="#" class="mobile-link" (click)="closeMenu()">HOME</a>
+        <a href="#" class="mobile-link" (click)="closeMenu()">SERVICES</a>
+        <a href="#" class="mobile-link" (click)="closeMenu()">PROJECTS</a>
+        <a href="#" class="mobile-link" (click)="closeMenu()">ABOUT</a>
+    </nav>
+</div>
+
+<div class="header-offset"></div>
