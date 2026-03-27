@@ -4,20 +4,29 @@
     <div class="footer-cta">
       <div class="cta-text">
         <h2>Let's Secure Your <span class="gold-text">Legacy.</span></h2>
-        <p>Expert consultancy for the world's most discerning visionaries.</p>
+        <p>Strategic consultancy for global visionaries.</p>
       </div>
+
       <div class="footer-email-wrap">
-        <input type="email" placeholder="ENTER YOUR EMAIL">
-        <button class="email-submit">CONNECT <i class="fas fa-arrow-right"></i></button>
+        <div class="input-container">
+          <input #emailInput type="email" placeholder="ENTER YOUR EMAIL" class="email-input">
+          <button class="email-submit" 
+                  [disabled]="isLoading()" 
+                  (click)="sendEmail(emailInput.value); !isError() && (emailInput.value='')">
+            {{ isLoading() ? '...' : 'CONNECT' }}
+          </button>
+        </div>
+        
+        @if (statusMessage()) {
+          <p [class]="isError() ? 'error-msg' : 'success-msg'">{{ statusMessage() }}</p>
+        }
       </div>
     </div>
 
     <div class="footer-main-grid">
-      <div class="footer-brand">
-        <div class="brand-logo">
-          <i class="fas fa-crown"></i>
-          <span>PRIME <br><small>EMIRATES CONSULTING</small></span>
-        </div>
+      <div class="brand-logo">
+        <i class="fas fa-crown"></i>
+        <span>PRIME <br><small>EMIRATES CONSULTING</small></span>
       </div>
 
       <div class="footer-nav-links">
@@ -25,12 +34,10 @@
           <a routerLink="/">HOME</a>
           <a routerLink="/services">SERVICES</a>
           <a routerLink="/projects">PROJECTS</a>
-          <a routerLink="/about">ABOUT</a>
         </div>
         <div class="nav-col contact-col">
           <span>DUBAI, UAE</span>
           <a href="mailto:office@prime-emirates.com">OFFICE@PRIME-EMIRATES.COM</a>
-          <span>+971 4 123 4567</span>
         </div>
       </div>
     </div>
@@ -38,9 +45,7 @@
     <div class="footer-legal">
       <p>&copy; 2026 PRIME EMIRATES. CRAFTED FOR THE 1%.</p>
       <div class="legal-links">
-        <a href="#">PRIVACY</a>
-        <span>/</span>
-        <a href="#">TERMS</a>
+        <a href="#">PRIVACY</a> / <a href="#">TERMS</a>
       </div>
     </div>
 
