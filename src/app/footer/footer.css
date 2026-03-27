@@ -1,0 +1,128 @@
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 120px 0 40px 0; /* Space for separation */
+  border-top: 1px solid #111; /* Extremely subtle line */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; /* Matching your main page margins */
+}
+
+/* 1. The Connected CTA Section */
+.footer-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #111;
+  margin-bottom: 80px;
+}
+
+.cta-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.cta-text p {
+  color: #666;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* Minimal Email Input */
+.footer-email-wrap {
+  display: flex;
+  border-bottom: 1px solid #333;
+  width: 400px;
+  padding-bottom: 10px;
+}
+
+.footer-email-wrap input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  outline: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.email-submit {
+  background: transparent;
+  border: none;
+  color: #D4AF37;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email-submit:hover { color: #fff; transform: translateX(5px); }
+
+/* 2. Main Grid Layout */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #D4AF37;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+}
+
+.brand-logo small { display: block; font-size: 9px; color: #444; margin-top: -5px; }
+
+/* Nav Links Styling */
+.footer-nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-col { display: flex; flex-direction: column; gap: 15px; }
+
+.nav-col a, .nav-col span {
+  color: #888;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-col a:hover { color: #D4AF37; }
+.contact-col span { color: #fff; } /* Direct contact highlighted */
+
+/* 3. Bottom Credits */
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #111;
+  padding-top: 40px;
+  font-size: 10px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.legal-links { display: flex; gap: 15px; }
+.legal-links a { color: #333; text-decoration: none; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
+  .footer-cta { flex-direction: column; align-items: flex-start; gap: 40px; }
+  .footer-email-wrap { width: 100%; }
+  .footer-main-grid { grid-template-columns: 1fr; }
+  .footer-nav-links { flex-direction: column; gap: 40px; }
+  .footer-legal { flex-direction: column; gap: 20px; text-align: center; }
+}
