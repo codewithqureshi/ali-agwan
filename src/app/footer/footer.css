@@ -1,0 +1,92 @@
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 120px 0 40px 0;
+  border-top: 1px solid #111;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #111;
+  margin-bottom: 80px;
+}
+
+.cta-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.gold-text { color: #D4AF37; }
+.cta-text p { color: #666; font-size: 14px; margin-top: 15px; letter-spacing: 1px; }
+
+/* --- INPUT TYPING FIX --- */
+.input-container {
+  display: flex;
+  border-bottom: 1px solid #333;
+  width: 400px;
+  position: relative;
+}
+
+.email-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  /* Zaroori: text-transform ko force none kiya hai typing ke liye */
+  text-transform: none !important; 
+}
+
+.email-input::placeholder {
+  text-transform: uppercase;
+  color: #444;
+  font-size: 11px;
+}
+
+.email-submit {
+  background: transparent;
+  border: none;
+  color: #D4AF37;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+/* Status Messages */
+.success-msg { color: #D4AF37; font-size: 10px; margin-top: 10px; position: absolute; }
+.error-msg { color: #ff4d4d; font-size: 10px; margin-top: 10px; position: absolute; }
+
+/* Grid Layout */
+.footer-main-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-bottom: 80px; }
+.brand-logo { display: flex; align-items: center; gap: 15px; color: #D4AF37; font-family: 'Playfair Display'; letter-spacing: 2px; }
+.brand-logo small { display: block; font-size: 9px; color: #444; }
+
+.footer-nav-links { display: flex; justify-content: space-between; }
+.nav-col { display: flex; flex-direction: column; gap: 12px; }
+.nav-col a, .nav-col span { color: #888; text-decoration: none; font-size: 11px; letter-spacing: 2px; font-weight: 600; }
+.nav-col a:hover { color: #D4AF37; }
+.contact-col span { color: #fff; }
+
+.footer-legal { display: flex; justify-content: space-between; border-top: 1px solid #111; padding-top: 40px; font-size: 10px; color: #333; letter-spacing: 2px; }
+
+/* Mobile View */
+@media (max-width: 900px) {
+  .footer-cta { flex-direction: column; align-items: flex-start; gap: 40px; }
+  .input-container { width: 100%; }
+  .footer-main-grid { grid-template-columns: 1fr; }
+  .footer-nav-links { flex-direction: column; gap: 40px; }
+}
