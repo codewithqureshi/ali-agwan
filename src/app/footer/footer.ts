@@ -56,5 +56,3 @@ statusMessage = signal('');
     }
   }
 }
-
-
