@@ -1,0 +1,111 @@
+/* Container Fix */
+.hw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hw-process-section {
+  background-color: #000;
+  padding: 120px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hw-header { margin-bottom: 80px; }
+.hw-tagline { color: #D4AF37; font-size: 11px; letter-spacing: 5px; font-weight: 700; display: block; margin-bottom: 10px; }
+.hw-title { font-family: 'Playfair Display', serif; font-size: 52px; line-height: 1.1; margin: 0; }
+.gold-text { color: #D4AF37; }
+
+/* Flow Layout (Row-Wise) */
+.hw-row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 30px;
+}
+
+/* Connecting Horizontal Line */
+.hw-connect-line {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #222, #D4AF37, #222, transparent);
+  z-index: 1;
+}
+
+/* --- THE CARD ENHANCEMENT --- */
+.hw-step-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03); /* Subtle visible box */
+  padding: 60px 35px 40px 35px;
+  border: 1px solid #1a1a1a; /* Visible border by default */
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hw-step-card:hover {
+  background: rgba(212, 175, 55, 0.05); /* Slight gold tint on hover */
+  border-color: #D4AF37; /* Sharp gold border */
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+/* Badge Styling */
+.hw-badge {
+  position: absolute;
+  top: -20px;
+  left: 35px;
+  width: 45px;
+  height: 45px;
+  background: #000;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.4s;
+}
+
+.hw-step-card:hover .hw-badge {
+  background: #D4AF37;
+  color: #000;
+  box-shadow: 0 0 15px #D4AF37;
+}
+
+/* Content inside card */
+.hw-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.hw-content p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.8;
+  transition: 0.3s;
+}
+
+.hw-step-card:hover .hw-content p {
+  color: #ccc; /* Brighten text on hover */
+}
+
+/* Mobile: Column View */
+@media (max-width: 900px) {
+  .hw-row-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .hw-connect-line { display: none; }
+  .hw-step-card { padding-top: 50px; }
+}
